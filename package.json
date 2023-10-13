@@ -1,7 +1,7 @@
 {
   "name": "clean-styled-components",
   "version": "1.0.0",
-  "description": "",
+  "description": "Clean Styled Components (CSC) is a clean and simple way to create Styled Components. CSC helps you keep your components completely separate from the main code, making them fully reusable. CSC also facilitates the creation and customization of components through the use of Javascript objects.",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "styled-components": "^6.0.9"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/16SAGG/CleanStyledComponents.git"
+  },
+  "bugs": {
+    "url": "https://github.com/16SAGG/CleanStyledComponents/issues"
+  },
+  "homepage": "https://github.com/16SAGG/CleanStyledComponents#readme"
 }
