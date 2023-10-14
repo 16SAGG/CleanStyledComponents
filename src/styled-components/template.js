@@ -1,7 +1,14 @@
 import { background } from "./abstracts/background.styled.abstract"
 import { border } from "./abstracts/border.styled.abstract"
 import { color } from "./abstracts/color.styled.abstract"
+import { contentAlignment } from "./abstracts/contentAlignment.styled.abstract"
 import { cursor } from "./abstracts/cursor.styled.abstract"
+import { dispay } from "./abstracts/display.styled.abstract"
+import { flexContainer } from "./abstracts/flexContainer.styled.abstract"
+import { flexItem } from "./abstracts/flexItem.styled.abstract"
+import { gap } from "./abstracts/gap.styled.abstract"
+import { gridContainer } from "./abstracts/gridContainer.styled.abstract"
+import { gridItem } from "./abstracts/gridItem.styled.abstract"
 import { height } from "./abstracts/height.styled.abstract"
 import { hover } from "./abstracts/hover.styled.abstract"
 import { margin } from "./abstracts/margin.styled.abstract"
@@ -33,7 +40,34 @@ export const template = ({
 
     $color = undefined, 
 
+    $justifyContent = undefined,
+    $alignItems = undefined,
+    $alignContent = undefined,
+
     $cursor = undefined,
+
+    $display = undefined,
+
+    $flexDirection = undefined,
+    $flexWrap = undefined,
+
+    $order = undefined,
+    $flexGrow = undefined,
+    $flexShrink = undefined,
+    $flexBasis = undefined, 
+    $alignSelf = undefined,
+
+    $gap = undefined,
+    $gridRowGap = undefined,
+    $gridColumnGap = undefined,
+
+    $gridTemplateAreas = undefined,
+    $gridTemplateColumns = undefined,
+    $gridTemplateRows = undefined,
+
+    $gridColumn = undefined,
+    $gridRow = undefined,
+    $gridArea = undefined,
 
     $minHeight = undefined, 
     $maxHeight = undefined,
@@ -116,8 +150,49 @@ export const template = ({
             $color : $color,
         })}
 
+        ${contentAlignment({
+            $justifyContent : $justifyContent,
+            $alignItems : $alignItems,
+            $alignContent : $alignContent,
+        })}
+
         ${cursor({
             $cursor : $cursor,
+        })}
+
+        ${dispay({
+            $display : $display,
+        })}
+
+        ${flexContainer({
+            $flexDirection : $flexDirection,
+            $flexWrap : $flexWrap,
+        })}
+
+        ${flexItem({
+            $order : $order,
+            $flexGrow : $flexGrow,
+            $flexShrink : $flexShrink,
+            $flexBasis : $flexBasis,
+            $alignSelf : $alignSelf,
+        })}
+
+        ${gap({
+            $gap : $gap,
+            $gridColumnGap : $gridColumnGap,
+            $gridRowGap : $gridRowGap,
+        })}
+
+        ${gridContainer({
+            $gridTemplateAreas : $gridTemplateAreas,
+            $gridTemplateColumns : $gridTemplateColumns,
+            $gridTemplateRows : $gridTemplateRows,
+        })}
+
+        ${gridItem({
+            $gridColumn : $gridColumn,
+            $gridRow : $gridRow,
+            $gridArea : $gridArea,
         })}
 
         ${height({
