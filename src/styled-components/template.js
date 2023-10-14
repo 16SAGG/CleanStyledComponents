@@ -6,6 +6,7 @@ import { cursor } from "./abstracts/cursor.styled.abstract"
 import { dispay } from "./abstracts/display.styled.abstract"
 import { flexContainer } from "./abstracts/flexContainer.styled.abstract"
 import { flexItem } from "./abstracts/flexItem.styled.abstract"
+import { focus } from "./abstracts/focus.styled.abstract"
 import { gap } from "./abstracts/gap.styled.abstract"
 import { gridContainer } from "./abstracts/gridContainer.styled.abstract"
 import { gridItem } from "./abstracts/gridItem.styled.abstract"
@@ -57,6 +58,8 @@ export const template = ({
     $flexShrink = undefined,
     $flexBasis = undefined, 
     $alignSelf = undefined,
+
+    $focusProperties = undefined,
 
     $gap = undefined,
     $gridRowGap = undefined,
@@ -178,6 +181,10 @@ export const template = ({
             $flexShrink : $flexShrink,
             $flexBasis : $flexBasis,
             $alignSelf : $alignSelf,
+        })}
+
+        ${focus({
+            $focusProperties : undefined,
         })}
 
         ${gap({
