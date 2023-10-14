@@ -12,6 +12,7 @@ import { gridItem } from "./abstracts/gridItem.styled.abstract"
 import { height } from "./abstracts/height.styled.abstract"
 import { hover } from "./abstracts/hover.styled.abstract"
 import { margin } from "./abstracts/margin.styled.abstract"
+import { opacity } from "./abstracts/opacity.styled.abstract"
 import { outline } from "./abstracts/outline.styled.abstract"
 import { overflow } from "./abstracts/overflow.styled.abstract"
 import { padding } from "./abstracts/padding.styled.abstract"
@@ -78,6 +79,8 @@ export const template = ({
     $marginBottom = undefined, 
     $marginLeft = undefined,
     $marginRight = undefined,
+
+    $opacity = undefined,
 
     $outlineStyle = undefined,
     $outlineColor = undefined,
@@ -209,6 +212,10 @@ export const template = ({
             $marginBottom : $marginBottom,
             $marginLeft : $marginLeft,
             $marginRight : $marginRight,
+        })}
+
+        ${opacity({
+            $opacity : undefined,
         })}
 
         ${outline({
