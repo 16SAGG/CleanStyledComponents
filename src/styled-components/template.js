@@ -184,7 +184,7 @@ export const template = ({
         })}
 
         ${focus({
-            $focusProperties : undefined,
+            $focusProperties : $focusProperties,
         })}
 
         ${gap({
