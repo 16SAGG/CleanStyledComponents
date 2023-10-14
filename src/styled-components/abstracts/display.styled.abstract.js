@@ -2,6 +2,6 @@ export const dispay = ({
     $display = undefined,
 }) =>{
     return `
-        ${($minWidth) ? `display : ${$minWidth};` : ''}
+        ${($display) ? `display : ${$display};` : ''}
     `
 }
