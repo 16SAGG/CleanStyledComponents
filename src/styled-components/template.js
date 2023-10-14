@@ -215,7 +215,7 @@ export const template = ({
         })}
 
         ${opacity({
-            $opacity : undefined,
+            $opacity : $opacity,
         })}
 
         ${outline({
