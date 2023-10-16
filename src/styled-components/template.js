@@ -21,6 +21,7 @@ import { scrollBar } from "./abstracts/scrollBar.styled.abstract"
 import { text } from "./abstracts/text.styled.abstract"
 import { transition } from "./abstracts/transition.styled.abstract"
 import { width } from "./abstracts/width.styled.abstract"
+import { zIndex } from "./abstracts/zIndex.styled.abstract"
 
 export const template = ({
 
@@ -130,6 +131,8 @@ export const template = ({
 
     $minWidth = undefined, 
     $maxWidth = undefined,
+
+    $zIndex = undefined,
 }) =>{
     return `
         ${background({
@@ -283,6 +286,10 @@ export const template = ({
         ${width({
             $minWidth : $minWidth,
             $maxWidth : $maxWidth,
+        })}
+
+        ${zIndex({
+            $zIndex : $zIndex,
         })}
     `
 }
