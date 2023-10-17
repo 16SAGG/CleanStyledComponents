@@ -74,6 +74,7 @@ export const template = ({
     $gridRow = undefined,
     $gridArea = undefined,
 
+    $height = undefined,
     $minHeight = undefined, 
     $maxHeight = undefined,
 
@@ -129,6 +130,7 @@ export const template = ({
     $transitionTimingFunction = undefined,
     $transitionDelay = undefined,
 
+    $width = undefined,
     $minWidth = undefined, 
     $maxWidth = undefined,
 
@@ -209,6 +211,7 @@ export const template = ({
         })}
 
         ${height({
+            $height : $height,
             $minHeight : $minHeight,
             $maxHeight : $maxHeight,
         })}
@@ -284,6 +287,7 @@ export const template = ({
         })}
 
         ${width({
+            $width : $width,
             $minWidth : $minWidth,
             $maxWidth : $maxWidth,
         })}
