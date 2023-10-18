@@ -111,7 +111,7 @@ export const template = ({
     $scrollBarTrackProperties = undefined,
     $scrollBarTrackHoverProperties = undefined,
 
-    $sliderProperties = undefined,
+    $sliderThumbProperties = undefined,
 
     $textAlign = undefined, 
     $textAlignLast = undefined, 
@@ -270,7 +270,7 @@ export const template = ({
         })}
 
         ${slider({
-            $sliderProperties : $sliderProperties,
+            $sliderThumbProperties : $sliderThumbProperties,
         })}
 
         ${text({

@@ -1,14 +1,14 @@
 export const slider = ({
-    $sliderProperties = undefined,
+    $sliderThumbProperties = undefined,
 }) =>{
     return `
         ${($sliderProperties) ? 
             `&::-webkit-slider-thumb {
-                ${$sliderProperties}
+                ${$sliderThumbProperties}
             }
             
             &::-moz-range-thumb {
-                ${$sliderProperties}
+                ${$sliderThumbProperties}
             }`
         : 
             ''}
