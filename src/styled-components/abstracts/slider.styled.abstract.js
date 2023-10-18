@@ -2,7 +2,7 @@ export const slider = ({
     $sliderThumbProperties = undefined,
 }) =>{
     return `
-        ${($sliderProperties) ? 
+        ${($sliderThumbProperties) ? 
             `&::-webkit-slider-thumb {
                 ${$sliderThumbProperties}
             }
