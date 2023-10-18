@@ -1,3 +1,4 @@
+import { appearance } from "./abstracts/appearance.styled.abstract"
 import { background } from "./abstracts/background.styled.abstract"
 import { border } from "./abstracts/border.styled.abstract"
 import { color } from "./abstracts/color.styled.abstract"
@@ -18,12 +19,14 @@ import { outline } from "./abstracts/outline.styled.abstract"
 import { overflow } from "./abstracts/overflow.styled.abstract"
 import { padding } from "./abstracts/padding.styled.abstract"
 import { scrollBar } from "./abstracts/scrollBar.styled.abstract"
+import { slider } from "./abstracts/slider.styled.abstract"
 import { text } from "./abstracts/text.styled.abstract"
 import { transition } from "./abstracts/transition.styled.abstract"
 import { width } from "./abstracts/width.styled.abstract"
 import { zIndex } from "./abstracts/zIndex.styled.abstract"
 
 export const template = ({
+    $appearance = undefined,
 
     $backgroundAttachment = undefined,
     $backgroundClip = undefined,
@@ -108,6 +111,8 @@ export const template = ({
     $scrollBarTrackProperties = undefined,
     $scrollBarTrackHoverProperties = undefined,
 
+    $sliderProperties = undefined,
+
     $textAlign = undefined, 
     $textAlignLast = undefined, 
     $textDirection = undefined,
@@ -137,6 +142,10 @@ export const template = ({
     $zIndex = undefined,
 }) =>{
     return `
+        ${appearance({
+            $appearance : $appearance,
+        })}
+
         ${background({
             $backgroundAttachment : $backgroundAttachment,
             $backgroundClip : $backgroundClip,
@@ -258,6 +267,10 @@ export const template = ({
             $scrollBarThumbHoverProperties : $scrollBarThumbHoverProperties,
             $scrollBarTrackProperties : $scrollBarTrackProperties,
             $scrollBarTrackHoverProperties : $scrollBarTrackHoverProperties,
+        })}
+
+        ${slider({
+            $sliderProperties : $sliderProperties,
         })}
 
         ${text({
