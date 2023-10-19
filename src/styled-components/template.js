@@ -13,6 +13,7 @@ import { gridContainer } from "./abstracts/gridContainer.styled.abstract"
 import { gridItem } from "./abstracts/gridItem.styled.abstract"
 import { height } from "./abstracts/height.styled.abstract"
 import { hover } from "./abstracts/hover.styled.abstract"
+import { list } from "./abstracts/list.styled.abstract"
 import { margin } from "./abstracts/margin.styled.abstract"
 import { opacity } from "./abstracts/opacity.styled.abstract"
 import { outline } from "./abstracts/outline.styled.abstract"
@@ -82,6 +83,10 @@ export const template = ({
     $maxHeight = undefined,
 
     $hoverProperties = undefined,
+
+    $listStyleImage = undefined,
+    $listStyleType = undefined,
+    $listStylePosition = undefined, 
 
     $marginTop = undefined, 
     $marginBottom = undefined, 
@@ -227,6 +232,12 @@ export const template = ({
 
         ${hover({
             $hoverProperties : $hoverProperties,
+        })}
+
+        ${list({
+            $listStyleImage : $listStyleImage,
+            $listStyleType : $listStyleType,
+            $listStylePosition : $listStylePosition,
         })}
 
         ${margin({
