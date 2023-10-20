@@ -115,6 +115,7 @@ export const template = ({
     $scrollBarThumbHoverProperties = undefined,
     $scrollBarTrackProperties = undefined,
     $scrollBarTrackHoverProperties = undefined,
+    $scrollBarCornerProperties = undefined,
 
     $sliderThumbProperties = undefined,
 
@@ -278,6 +279,7 @@ export const template = ({
             $scrollBarThumbHoverProperties : $scrollBarThumbHoverProperties,
             $scrollBarTrackProperties : $scrollBarTrackProperties,
             $scrollBarTrackHoverProperties : $scrollBarTrackHoverProperties,
+            $scrollBarCornerProperties : $scrollBarCornerProperties,
         })}
 
         ${slider({

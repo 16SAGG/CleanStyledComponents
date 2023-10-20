@@ -7,6 +7,7 @@ export const scrollBar = ({
     $scrollBarThumbHoverProperties = undefined,
     $scrollBarTrackProperties = undefined,
     $scrollBarTrackHoverProperties = undefined,
+    $scrollBarCornerProperties = undefined,
 }) =>{
     return `
         ${($scrollBarProperties) ? 
@@ -61,6 +62,13 @@ export const scrollBar = ({
         ${($scrollBarTrackHoverProperties) ? 
             `&::-webkit-scrollbar-track:hover {
                 ${$scrollBarTrackHoverProperties}
+            }`
+        : 
+            ''}
+        
+        ${($scrollBarCornerProperties) ? 
+            `&::-webkit-scrollbar-corner {
+                ${$scrollBarCornerProperties}
             }`
         : 
             ''}
