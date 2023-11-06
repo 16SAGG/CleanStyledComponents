@@ -19,6 +19,7 @@ import { opacity } from "./abstracts/opacity.styled.abstract"
 import { outline } from "./abstracts/outline.styled.abstract"
 import { overflow } from "./abstracts/overflow.styled.abstract"
 import { padding } from "./abstracts/padding.styled.abstract"
+import { position } from "./abstracts/position.styled.abstract"
 import { scrollBar } from "./abstracts/scrollBar.styled.abstract"
 import { slider } from "./abstracts/slider.styled.abstract"
 import { text } from "./abstracts/text.styled.abstract"
@@ -106,6 +107,8 @@ export const template = ({
     $paddingBottom = undefined, 
     $paddingLeft = undefined,
     $paddingRight = undefined,
+
+    $position = undefined,
 
     $scrollBarProperties = undefined,
     $scrollBarHoverProperties = undefined,
@@ -268,6 +271,10 @@ export const template = ({
             $paddingBottom : $paddingBottom,
             $paddingLeft : $paddingLeft,
             $paddingRight : $paddingRight,
+        })}
+
+        ${position({
+            $position : $position,
         })}
 
         ${scrollBar({
