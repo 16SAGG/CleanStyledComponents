@@ -15,6 +15,7 @@ import { height } from "./abstracts/height.styled.abstract"
 import { hover } from "./abstracts/hover.styled.abstract"
 import { list } from "./abstracts/list.styled.abstract"
 import { margin } from "./abstracts/margin.styled.abstract"
+import { numberInput } from "./abstracts/numberInput.styled.abstract"
 import { opacity } from "./abstracts/opacity.styled.abstract"
 import { outline } from "./abstracts/outline.styled.abstract"
 import { overflow } from "./abstracts/overflow.styled.abstract"
@@ -94,6 +95,10 @@ export const template = ({
     $marginLeft = undefined,
     $marginRight = undefined,
 
+    $outerSpinNumberInputProperties = undefined,
+    $innerSpinNumberInputProperties = undefined,
+    $firefoxNumberInputProperties = undefined,
+
     $opacity = undefined,
 
     $outlineStyle = undefined,
@@ -152,181 +157,187 @@ export const template = ({
 }) =>{
     return `
         ${appearance({
-            $appearance : $appearance,
+            $appearance,
         })}
 
         ${background({
-            $backgroundAttachment : $backgroundAttachment,
-            $backgroundClip : $backgroundClip,
-            $backgroundColor : $backgroundColor,
-            $backgroundImage : $backgroundImage,
-            $backgroundOrigin : $backgroundOrigin,
-            $backgroundPosition : $backgroundPosition,
-            $backgroundRepeat : $backgroundRepeat,
-            $backgroundSize : $backgroundSize,
+            $backgroundAttachment,
+            $backgroundClip,
+            $backgroundColor,
+            $backgroundImage,
+            $backgroundOrigin,
+            $backgroundPosition,
+            $backgroundRepeat,
+            $backgroundSize,
         })}
 
         ${border({
-            $borderStyle : $borderStyle,
-            $borderColor : $borderColor, 
-            $borderTopWidth : $borderTopWidth,
-            $borderBottomWidth : $borderBottomWidth,
-            $borderLeftWidth : $borderLeftWidth,
-            $borderRightWidth : $borderRightWidth,
+            $borderStyle,
+            $borderColor, 
+            $borderTopWidth,
+            $borderBottomWidth,
+            $borderLeftWidth,
+            $borderRightWidth,
         })}
 
         ${color({
-            $color : $color,
+            $color,
         })}
 
         ${contentAlignment({
-            $justifyContent : $justifyContent,
-            $alignItems : $alignItems,
-            $alignContent : $alignContent,
+            $justifyContent,
+            $alignItems,
+            $alignContent,
         })}
 
         ${cursor({
-            $cursor : $cursor,
+            $cursor,
         })}
 
         ${dispay({
-            $display : $display,
+            $display,
         })}
 
         ${flexContainer({
-            $flexDirection : $flexDirection,
-            $flexWrap : $flexWrap,
+            $flexDirection,
+            $flexWrap,
         })}
 
         ${flexItem({
-            $order : $order,
-            $flexGrow : $flexGrow,
-            $flexShrink : $flexShrink,
-            $flexBasis : $flexBasis,
-            $alignSelf : $alignSelf,
+            $order,
+            $flexGrow,
+            $flexShrink,
+            $flexBasis,
+            $alignSelf,
         })}
 
         ${focus({
-            $focusProperties : $focusProperties,
+            $focusProperties,
         })}
 
         ${gap({
-            $gap : $gap,
-            $gridColumnGap : $gridColumnGap,
-            $gridRowGap : $gridRowGap,
+            $gap,
+            $gridColumnGap,
+            $gridRowGap,
         })}
 
         ${gridContainer({
-            $gridTemplateAreas : $gridTemplateAreas,
-            $gridTemplateColumns : $gridTemplateColumns,
-            $gridTemplateRows : $gridTemplateRows,
+            $gridTemplateAreas,
+            $gridTemplateColumns,
+            $gridTemplateRows,
         })}
 
         ${gridItem({
-            $gridColumn : $gridColumn,
-            $gridRow : $gridRow,
-            $gridArea : $gridArea,
+            $gridColumn,
+            $gridRow,
+            $gridArea,
         })}
 
         ${height({
-            $height : $height,
-            $minHeight : $minHeight,
-            $maxHeight : $maxHeight,
+            $height,
+            $minHeight,
+            $maxHeight,
         })}
 
         ${hover({
-            $hoverProperties : $hoverProperties,
+            $hoverProperties,
         })}
 
         ${list({
-            $listStyleImage : $listStyleImage,
-            $listStyleType : $listStyleType,
-            $listStylePosition : $listStylePosition,
+            $listStyleImage,
+            $listStyleType,
+            $listStylePosition,
         })}
 
         ${margin({
-            $marginTop : $marginTop,
-            $marginBottom : $marginBottom,
-            $marginLeft : $marginLeft,
-            $marginRight : $marginRight,
+            $marginTop,
+            $marginBottom,
+            $marginLeft,
+            $marginRight,
+        })}
+
+        ${numberInput({
+            $outerSpinNumberInputProperties,
+            $innerSpinNumberInputProperties,
+            $firefoxNumberInputProperties,
         })}
 
         ${opacity({
-            $opacity : $opacity,
+            $opacity,
         })}
 
         ${outline({
-            $outlineStyle : $outlineStyle,
-            $outlineColor : $outlineColor,
-            $outlineWidth : $outlineWidth,
-            $outlineOffset : $outlineOffset,
+            $outlineStyle,
+            $outlineColor,
+            $outlineWidth,
+            $outlineOffset,
         })}
 
         ${overflow({
-            $overflow : $overflow,
+            $overflow,
         })}
 
         ${padding({
-            $paddingTop : $paddingTop,
-            $paddingBottom : $paddingBottom,
-            $paddingLeft : $paddingLeft,
-            $paddingRight : $paddingRight,
+            $paddingTop,
+            $paddingBottom,
+            $paddingLeft,
+            $paddingRight,
         })}
 
         ${position({
-            $position : $position,
+            $position,
         })}
 
         ${scrollBar({
-            $scrollBarProperties : $scrollBarProperties,
-            $scrollBarHoverProperties : $scrollBarHoverProperties,
-            $scrollBarButtonProperties : $scrollBarButtonProperties,
-            $scrollBarButtonHoverProperties : $scrollBarButtonHoverProperties,
-            $scrollBarThumbProperties : $scrollBarThumbProperties,
-            $scrollBarThumbHoverProperties : $scrollBarThumbHoverProperties,
-            $scrollBarTrackProperties : $scrollBarTrackProperties,
-            $scrollBarTrackHoverProperties : $scrollBarTrackHoverProperties,
-            $scrollBarCornerProperties : $scrollBarCornerProperties,
+            $scrollBarProperties,
+            $scrollBarHoverProperties,
+            $scrollBarButtonProperties,
+            $scrollBarButtonHoverProperties,
+            $scrollBarThumbProperties,
+            $scrollBarThumbHoverProperties,
+            $scrollBarTrackProperties,
+            $scrollBarTrackHoverProperties,
+            $scrollBarCornerProperties,
         })}
 
         ${slider({
-            $sliderThumbProperties : $sliderThumbProperties,
+            $sliderThumbProperties,
         })}
 
         ${text({
-            $textAlign : $textAlign,
-            $textAlignLast : $textAlignLast,
-            $textDirection : $textDirection,
-            $unicodeBidi : $unicodeBidi,
-            $verticalAlign : $verticalAlign,
-            $textDecorationLine : $textDecorationLine,
-            $textDecorationColor : $textDecorationColor,
-            $textDecorationStyle : $textDecorationStyle,
-            $textDecorationThickness : $textDecorationThickness,
-            $textTransform : $textTransform,
-            $textIndent : $textIndent,
-            $letterSpacing : $letterSpacing,
-            $lineHeight : $lineHeight,
-            $wordSpacing : $wordSpacing,
-            $whiteSpace : $whiteSpace,
-            $textShadow : $textShadow,
+            $textAlign,
+            $textAlignLast,
+            $textDirection,
+            $unicodeBidi,
+            $verticalAlign,
+            $textDecorationLine,
+            $textDecorationColor,
+            $textDecorationStyle,
+            $textDecorationThickness,
+            $textTransform,
+            $textIndent,
+            $letterSpacing,
+            $lineHeight,
+            $wordSpacing,
+            $whiteSpace,
+            $textShadow,
         })}
 
         ${transition({
-            $transitionProperty : $transitionProperty,
-            $transitionDuration : $transitionDuration,
-            $transitionTimingFunction : $transitionTimingFunction,
-            $transitionDelay : $transitionDelay,
+            $transitionProperty,
+            $transitionDuration,
+            $transitionTimingFunction,
+            $transitionDelay,
         })}
 
         ${width({
-            $width : $width,
-            $minWidth : $minWidth,
-            $maxWidth : $maxWidth,
+            $width,
+            $minWidth,
+            $maxWidth,
         })}
 
         ${zIndex({
-            $zIndex : $zIndex,
+            $zIndex,
         })}
     `
 }
