@@ -25,6 +25,7 @@ import { scrollBar } from "./abstracts/scrollBar.styled.abstract"
 import { slider } from "./abstracts/slider.styled.abstract"
 import { text } from "./abstracts/text.styled.abstract"
 import { transition } from "./abstracts/transition.styled.abstract"
+import { webAppearance } from "./abstracts/webAppearance.styled.abstract"
 import { width } from "./abstracts/width.styled.abstract"
 import { zIndex } from "./abstracts/zIndex.styled.abstract"
 
@@ -148,6 +149,9 @@ export const template = ({
     $transitionDuration = undefined,
     $transitionTimingFunction = undefined,
     $transitionDelay = undefined,
+
+    $webkitAppearance = undefined,
+    $mozAppearance = undefined,
 
     $width = undefined,
     $minWidth = undefined, 
@@ -330,6 +334,11 @@ export const template = ({
             $transitionDelay,
         })}
 
+        ${webAppearance({
+            $webkitAppearance,
+            $mozAppearance,
+        })}
+        
         ${width({
             $width,
             $minWidth,
