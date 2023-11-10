@@ -8,6 +8,7 @@ import { dispay } from "./abstracts/display.styled.abstract"
 import { flexContainer } from "./abstracts/flexContainer.styled.abstract"
 import { flexItem } from "./abstracts/flexItem.styled.abstract"
 import { focus } from "./abstracts/focus.styled.abstract"
+import { font } from "./abstracts/font.styled.abstract"
 import { gap } from "./abstracts/gap.styled.abstract"
 import { gridContainer } from "./abstracts/gridContainer.styled.abstract"
 import { gridItem } from "./abstracts/gridItem.styled.abstract"
@@ -68,6 +69,12 @@ export const template = ({
     $alignSelf = undefined,
 
     $focusProperties = undefined,
+
+    $font = undefined,
+    $fontVariant = undefined,
+    $fontWeight = undefined,
+    $fontSize = undefined,
+    $fontFamily = undefined,
 
     $gap = undefined,
     $gridRowGap = undefined,
@@ -217,6 +224,14 @@ export const template = ({
 
         ${focus({
             $focusProperties,
+        })}
+
+        ${font({
+            $font,
+            $fontVariant,
+            $fontWeight,
+            $fontSize,
+            $fontFamily,
         })}
 
         ${gap({
